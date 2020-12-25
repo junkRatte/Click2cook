@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Click2cook/static/css/main.8c9301b2.chunk.css",
-    "main.js": "/Click2cook/static/js/main.c50491de.chunk.js",
-    "main.js.map": "/Click2cook/static/js/main.c50491de.chunk.js.map",
+    "main.css": "/Click2cook/static/css/main.8c75365a.chunk.css",
+    "main.js": "/Click2cook/static/js/main.19e61b0f.chunk.js",
+    "main.js.map": "/Click2cook/static/js/main.19e61b0f.chunk.js.map",
     "runtime-main.js": "/Click2cook/static/js/runtime-main.5cb5911d.js",
     "runtime-main.js.map": "/Click2cook/static/js/runtime-main.5cb5911d.js.map",
     "static/js/2.d681ff53.chunk.js": "/Click2cook/static/js/2.d681ff53.chunk.js",
     "static/js/2.d681ff53.chunk.js.map": "/Click2cook/static/js/2.d681ff53.chunk.js.map",
     "index.html": "/Click2cook/index.html",
-    "static/css/main.8c9301b2.chunk.css.map": "/Click2cook/static/css/main.8c9301b2.chunk.css.map",
+    "static/css/main.8c75365a.chunk.css.map": "/Click2cook/static/css/main.8c75365a.chunk.css.map",
     "static/js/2.d681ff53.chunk.js.LICENSE.txt": "/Click2cook/static/js/2.d681ff53.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5cb5911d.js",
     "static/js/2.d681ff53.chunk.js",
-    "static/css/main.8c9301b2.chunk.css",
-    "static/js/main.c50491de.chunk.js"
+    "static/css/main.8c75365a.chunk.css",
+    "static/js/main.19e61b0f.chunk.js"
   ]
 }
