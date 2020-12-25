@@ -1,8 +1,6 @@
 @import './scss/navbar';
 @import './scss/recipe';
 @import './scss/searchResults';
-@import './scss/direction';
-@import './scss/pagination';
 
 * {
   margin: 0;
@@ -19,25 +17,23 @@ body {
   background: linear-gradient(to right bottom, #FFEDBC, #ED4264);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(100vh - 8vw);
 }
 
 .container {
-  max-width: 130rem;
+  max-width: 150rem;
   min-height: 100%;
   margin: 4vw auto;
-  background-color: #fff;
+  background-color: #f8f8f8;
   box-shadow: 0 2rem 3rem 0.5rem rgba(97,85,81,.2);
   border-radius: 1rem;
 
   &__content {
     height: 100vh;
     display: grid;
-    grid-template-columns: 0.7fr 1.7fr;
-    grid-template-rows: 1.5fr 0.5fr;
+    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      ". ."
       ". .";
   }
 }
@@ -46,14 +42,6 @@ ul {
   list-style: none;
 }
 
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: all .5s;
-}
-
-.show {
-  opacity: 1;
-  visibility: visible;
-  transition: all .5s;
+a {
+  text-decoration: none;
 }

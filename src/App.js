@@ -3,8 +3,6 @@ import React, { useState, useEffect} from 'react';
 import Navbar from './components/Navbar';
 import SearchResults from './components/SearchResults';
 import Recipe from './components/Recipe';
-import Direction from './components/Direction';
-import Pagination from './components/Pagination';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -14,8 +12,6 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(8);
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
 
@@ -47,26 +43,15 @@ function App() {
     setQuery(search);
   }
 
-
-  /* posts */
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = recipes.slice(indexOfFirstPost, indexOfLastPost)
-
-  const paginate = pageNumber => setCurrentPage(pageNumber);
-
-
   return (
     <Router>
       <div className="container">
         <Navbar updateSearch={updateSearch} getSearch={getSearch}/>
         <div className="container__content">
-          <SearchResults recipes={currentPosts} error={error} isLoaded={isLoaded}/>
+          <SearchResults recipes={recipes} error={error} isLoaded={isLoaded}/>
           <Switch>
             <Route path="/recipe/:id" exact component={Recipe}/>
           </Switch>
-          <Pagination postsPerPage={postsPerPage} totalPosts={recipes.length} paginate={paginate}/>
-          <Direction />
         </div>
       </div>
     </Router>

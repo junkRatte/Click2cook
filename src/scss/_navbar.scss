@@ -70,7 +70,7 @@ header {
         }
     }
 
-    .bookmark {
+    .fork {
         display: flex;
         font-size: 2rem;
         font-weight: 600;
@@ -80,29 +80,12 @@ header {
         height: 100%;
         padding: 1rem 2rem;
 
-        .text {
+        a {
             color: #fd7c96;
         }
         
         &:hover {
             background-color: #f2efee;
         }
-
-        i {
-            margin-right: 1rem;
-            color: #fd7c96;
-        }
-    }
-
-    .bookmark__list {
-        width: 50rem;
-        height: auto;
-        background-color: #f2efee;
-        position: absolute;
-        z-index: 2;
-        right: 0;
-        bottom: -4.7rem;
-        padding: 1rem 2rem;
-        font-size: 2rem;
     }
 }

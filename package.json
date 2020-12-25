@@ -1,8 +1,8 @@
 {
-  "name": "c2c2",
+  "name": "c2c",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://junkratte.github.io/Click2cook2/",
+  "homepage": "https://junkRatte.github.io/Click2cook/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
