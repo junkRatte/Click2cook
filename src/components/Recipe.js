@@ -21,9 +21,7 @@ function Recipe ( {match} ) {
     useEffect(() => {
         fetchRecipe();
     }, [location]); 
-
-    console.log(items)
-        
+           
     return (
         <div className="recipe">
             <div>
