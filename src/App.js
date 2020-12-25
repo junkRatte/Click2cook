@@ -5,6 +5,7 @@ import SearchResults from './components/SearchResults';
 import Recipe from './components/Recipe';
 import Direction from './components/Direction';
 import Pagination from './components/Pagination';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
   const APP_ID = "ebbadcbb";
@@ -16,7 +17,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(8);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('pizza');
+  const [query, setQuery] = useState('');
 
   const getRecipes = async () => {
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
@@ -54,16 +55,21 @@ function App() {
 
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
+
   return (
-    <div className="container">
-      <Navbar updateSearch={updateSearch} getSearch={getSearch}/>
-      <div className="container__content">
-        <SearchResults recipes={currentPosts} error={error} isLoaded={isLoaded}/>
-        <Recipe />
-        <Pagination postsPerPage={postsPerPage} totalPosts={recipes.length} paginate={paginate}/>
-        <Direction />
+    <Router>
+      <div className="container">
+        <Navbar updateSearch={updateSearch} getSearch={getSearch}/>
+        <div className="container__content">
+          <SearchResults recipes={currentPosts} error={error} isLoaded={isLoaded}/>
+          <Switch>
+            <Route path="/recipe/:id" exact component={Recipe}/>
+          </Switch>
+          <Pagination postsPerPage={postsPerPage} totalPosts={recipes.length} paginate={paginate}/>
+          <Direction />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
